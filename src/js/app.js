@@ -33,6 +33,10 @@ function render(variables = {}) {
   let city = variables.city ? variables.city : "City";
   let country = variables.country ? variables.country : "Country";
   let location = city && country ? `${city}, ${country}` : `${city}${country}`;
+  let twitter = variables.twitter ? variables.twitter : "";
+  let github = variables.github ? variables.github : "";
+  let linkedin = variables.linkedin ? variables.linkedin : "";
+  let instagram = variables.instagram ? variables.instagram : "";
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
@@ -43,18 +47,10 @@ function render(variables = {}) {
           <h2>${role}</h2>
           <h3>${location}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${
-              variables.twitter ? variables.twitter : ""
-            }"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/${
-              variables.github ? variables.github : ""
-            }"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/${
-              variables.linkedin ? variables.linkedin : ""
-            }"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/${
-              variables.instagram ? variables.instagram : ""
-            }"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/school/${linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
