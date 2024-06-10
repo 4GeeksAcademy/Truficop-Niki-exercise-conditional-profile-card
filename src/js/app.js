@@ -27,16 +27,17 @@ function render(variables = {}) {
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
-  let name = variables.name ? variables.name : "Name";
-  let lastName = variables.lastName ? variables.lastName : "Last Name";
-  let role = variables.role ? variables.role : "Role";
-  let city = variables.city ? variables.city : "City";
-  let country = variables.country ? variables.country : "Country";
-  let location = city && country ? `${city}, ${country}` : `${city}${country}`;
-  let twitter = variables.twitter ? variables.twitter : "";
-  let github = variables.github ? variables.github : "";
-  let linkedin = variables.linkedin ? variables.linkedin : "";
-  let instagram = variables.instagram ? variables.instagram : "";
+  const name = variables.name ? variables.name : "Name";
+  const lastName = variables.lastName ? variables.lastName : "Last Name";
+  const role = variables.role ? variables.role : "Role";
+  const city = variables.city ? variables.city : "City";
+  const country = variables.country ? variables.country : "Country";
+  const location =
+    city && country ? `${city}, ${country}` : `${city}${country}`;
+  const twitter = variables.twitter ? variables.twitter : "";
+  const github = variables.github ? variables.github : "";
+  const linkedin = variables.linkedin ? variables.linkedin : "";
+  const instagram = variables.instagram ? variables.instagram : "";
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
